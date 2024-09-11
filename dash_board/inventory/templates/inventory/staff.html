@@ -1,0 +1,49 @@
+{% extends "partials/base.html" %}
+
+{% block title  %}Staff Page{% endblock title  %}
+
+{% block content %}
+
+<!--Table-->
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <table class="table bg-white">
+                    <thead class="bg-info">
+                        <tr class="text-white">
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><a class="btn btn-info btn-sm" href="">View</a></th>
+                            <td>vidhyuth</td>
+                            <td>sureshbabu</td>
+                            <td>vidhyuth@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a class="btn btn-info btn-sm" href="">View</a></th>
+                            <td>elango</td>
+                            <td>anbu</td>
+                            <td>elango@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a class="btn btn-info btn-sm" href="">View</a></th>
+                            <td>maddy</td>
+                            <td>Ramalingam</td>
+                            <td>maddy@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+<!--End Table-->
+
+{% endblock content %}
