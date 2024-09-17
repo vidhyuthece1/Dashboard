@@ -11,5 +11,8 @@ class ProductAdmin(admin.ModelAdmin):
 # Register your models here.
 
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Order)
+
 # admin.site.unregister(Group)
+
+admin.site.register(Order)
+
