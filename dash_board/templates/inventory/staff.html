@@ -14,31 +14,21 @@
                 <table class="table bg-white">
                     <thead class="bg-info">
                         <tr class="text-white">
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col"></th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for worker in workers %}
                         <tr>
-                            <th scope="row"><a class="btn btn-info btn-sm" href="">View</a></th>
-                            <td>vidhyuth</td>
-                            <td>sureshbabu</td>
-                            <td>vidhyuth@gmail.com</td>
+                            <th scope="row"><a class="btn btn-info btn-sm" href="{% url "inventory-staff-detail" worker.id %}">View</a></th>
+                            <td>{{worker.username}}</td>
+                            <td>{{worker.email}}</td>
+                            <td>{{worker.profile.phone}}</td>
                         </tr>
-                        <tr>
-                            <th scope="row"><a class="btn btn-info btn-sm" href="">View</a></th>
-                            <td>elango</td>
-                            <td>anbu</td>
-                            <td>elango@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><a class="btn btn-info btn-sm" href="">View</a></th>
-                            <td>maddy</td>
-                            <td>Ramalingam</td>
-                            <td>maddy@gmail.com</td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
