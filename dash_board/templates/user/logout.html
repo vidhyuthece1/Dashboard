@@ -5,12 +5,24 @@
 {% block content %}
 
 {% if request.user.is_authenticated %}
-    <div style='margin-top:30px;'>
-        <form method='POST'>{% csrf_token %}
-            <p>Are you sure you want to logout?</p>
-            <button type='submit'>Yes, logout.</button>
-        </form>
+    <div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="border bg-white p-3">
+                <h3>Logout</h3>
+                <hr>
+                <div class="alert alert-danger">
+                    <h4>Are You Sure you want to logout ?</h4>
+                </div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <a class="btn btn-secondary" href="{% url "inventory-index" %}">Cancel</a>
+                    <input class="btn btn-danger"type="submit" value="logout">
+                </form>
+            </div>
+       </div>
     </div>
+</div>
 {% else %}
 <p>You're not logged in. Would you like to <a href='user/login/'>Login</a>?</p>
 {% endif %}
