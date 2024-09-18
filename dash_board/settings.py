@@ -144,3 +144,4 @@ LOGIN_REDIRECT_URL = 'inventory-index'
 LOGIN_URL = 'user-login'
 
 LOGOUT_REDIRECT_URL = 'inventory-index'
+
