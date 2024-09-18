@@ -1,14 +1,30 @@
 from django.shortcuts import render ,redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .models import Product
-from .forms import ProductForm
+from .models import Product,Order
+from .forms import ProductForm, OrderForm
 from django.contrib.auth.models import User
 # Create your views here.
 
-@login_required
+@login_required(login_url='user-login')
 def index(request):
-    return render (request,'inventory/index.html')
+    order= Order.objects.all()
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.staff = request.user
+            instance.save()
+            return redirect('inventory-index')
+        
+    else:
+        form = OrderForm()
+    context = {
+        'form': form,
+        'order': order,
+        
+    }
+    return render(request, 'inventory/index.html', context)
 
 @login_required
 def staff(request):
@@ -67,4 +83,8 @@ def product_update(request,pk):
 
 @login_required
 def order(request):
-    return render(request, 'inventory/order.html')
+    orders = Order.objects.all()
+    context={
+        'orders' :orders,
+    }
+    return render(request, 'inventory/order.html',context)
