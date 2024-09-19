@@ -35,3 +35,6 @@ Orders:
 # User view:
 ![user oreder page](https://github.com/user-attachments/assets/7d1a9c94-fab1-4d57-a437-9ed9dc882749)
 
+# Logout page:
+![logout page](https://github.com/user-attachments/assets/be933762-d7b1-4933-bb67-31cc930f789f)
+
