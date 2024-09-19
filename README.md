@@ -3,12 +3,15 @@
 This is a project where the user can order the product that they want from the inventory. The admin can also view the number of products ordered by a user, and then it can be restored. The admin can view the products and orders in the dashboard. Admin can delete or add the product and its quantity as per the stock that is received.The user who had already registered was only able to login, or else they had to register, and then they could login and order the product.
 
 # LoginPage:
+
 ![login page](https://github.com/user-attachments/assets/698ffa65-bb75-4a06-984e-aa9ce389a76c)
 
 # Register page:
+
 ![register Page](https://github.com/user-attachments/assets/58fe0387-aaee-4a09-b650-45f6fb922d2a)
 
 # Admin View:
+
 Admin dashboard:
 ![admin dashboard](https://github.com/user-attachments/assets/e0619f37-05d1-4570-8cdb-386b216ef9bb)
 
